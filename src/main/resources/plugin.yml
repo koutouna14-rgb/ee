@@ -1,0 +1,20 @@
+name: AetherMCAntiAbuse
+version: 1.0.0
+main: com.aethermc.antiabuse.AetherMCAntiAbuse
+api-version: 1.20
+author: AetherMC
+description: Detects staff abuse of Creative gamemode (item injection/duplication) and reports via webhook.
+
+commands:
+  antiabuse:
+    description: AetherMCAntiAbuse admin commands
+    permission: aethermc.antiabuse.admin
+    usage: /antiabuse <reload|status>
+
+permissions:
+  aethermc.antiabuse.admin:
+    description: Allows managing AetherMCAntiAbuse
+    default: op
+  aethermc.antiabuse.exempt:
+    description: Exempts a staff member from abuse tracking (use sparingly, e.g. for builders with a legitimate ongoing creative task)
+    default: false

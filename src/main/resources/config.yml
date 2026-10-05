@@ -1,0 +1,32 @@
+# AetherMCAntiAbuse configuration
+
+webhook:
+  url: "https://discord.com/api/webhooks/REPLACE/ME"
+  # Only send alerts to a PRIVATE staff/admin channel. This tool logs staff actions
+  # for accountability purposes and should never be used to track regular players.
+  enabled: true
+  username: "AetherMC AntiAbuse"
+
+tracking:
+  # How long (seconds) a creative-spawned item stays "tainted" and watched after it
+  # leaves the spawning player's hands.
+  taint-window-seconds: 300
+
+  # Minimum stack size worth flagging (avoids noise from e.g. 1 torch).
+  min-flag-amount: 1
+
+  # Which materials to always flag regardless of amount (high-value items).
+  always-flag-materials:
+    - NETHERITE_BLOCK
+    - NETHERITE_INGOT
+    - ELYTRA
+    - TOTEM_OF_UNDYING
+    - ENCHANTED_GOLDEN_APPLE
+    - SHULKER_BOX
+    - BEACON
+    - DRAGON_EGG
+    - NETHER_STAR
+
+logging:
+  log-to-console: true
+  log-to-file: true
